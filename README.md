@@ -1406,11 +1406,12 @@ macbook@MacBook-Air-MacBook ~ %
 
 | № | Назва групи (власне формулювання) | Рядки виводу, віднесені до групи | Обґрунтування |
 |---|---|---|---|
-| 1 | Результат | <code>&lt;HTML&gt;&lt;HEAD&gt;&lt;meta http-equiv="content-type" content="text/html;charset=utf-8"&gt;<br>&lt;TITLE&gt;301 Moved&lt;/TITLE&gt;&lt;/HEAD&gt;&lt;BODY&gt;<br>&lt;/BODY&gt;&lt;/HTML&gt;<br>&lt;!DOCTYPE html&gt;</code> | Готовий код і текст сторінки, який бачить користувач |
-| 2 | HTTP/HTTPS (Запит і відповідь) | <code>&gt; GET / HTTP/2<br>&gt;Host: google.com<br>&lt;HTTP/2 301<br>&lt;location: https://www.google.com/</code> | Обмін команд для завантаження сторінки |
-| 3 | TLS/SSL (Перевірка сертифікатів та шифрування) | <code>* TLSv1.2 (IN), TLS handshake, Certificate (11):<br>* (304) (OUT), TLS handshake, Client hello (1):<br>*   CAfile: /etc/ssl/cert.pem<br>*   CApath: none</code> | Перевірка сертифікату сайту та захист даних |
-| 4 | DNS (Перекладання в IP-адресу) | <code>* Host google.com:443 was resolved.<br>* IPv6: (none)<br>* IPv4: 142.250.120.100, 142.250.120.113, 142.250.120.139, 142.250.120.138, 142.250.120.101, 142.250.120.102<br>fortran-lang.org. 12145 IN A 185.199.108.153</code> | Перекладає зрозуміле доменне ім'я в числову IP-адресу |
-| 5 | Порти (Підключення до сервера) | <code>*   Trying 104.154.89.105:443...<br>* Connected to google.com (142.250.120.100) port 443</code> | Встановлення зв'язку з потрібним портом сервера (Найближчий до апаратного забезпечення) |
+| 1 | Результат | `<HTML><HEAD><meta http-equiv="content-type" content="text/html;charset=utf-8">`<br>`<TITLE>301 Moved</TITLE></HEAD><BODY>`<br>`</BODY></HTML>`<br>`<!DOCTYPE html>` | Готовий код і текст сторінки, який бачить користувач |
+| 2 | HTTP/HTTPS (Запит і відповідь) | `> GET / HTTP/2`<br>`> Host: google.com`<br>`< HTTP/2 301`<br>`< location: https://www.google.com/` | Обмін команд для завантаження сторінки |
+| 3 | TLS/SSL (Перевірка сертифікатів та шифрування) | `* TLSv1.2 (IN), TLS handshake, Certificate (11):`<br>`* (304) (OUT), TLS handshake, Client hello (1):`<br>`* CAfile: /etc/ssl/cert.pem`<br>`* CApath: none` | Перевірка сертифікату сайту та захист даних |
+| 4 | DNS (Перекладання в IP-адресу) | `* Host google.com:443 was resolved.`<br>`* IPv6: (none)`<br>`* IPv4: 142.250.120.100, 142.250.120.113, 142.250.120.139, 142.250.120.138, 142.250.120.101, 142.250.120.102`<br>`fortran-lang.org. 12145 IN A 185.199.108.153` | Перекладає зрозуміле доменне ім'я в числову IP-адресу |
+| 5 | Порти (Підключення до сервера) | `* Trying 104.154.89.105:443...`<br>`* Connected to google.com (142.250.120.100) port 443` | Встановлення зв'язку з потрібним портом сервера (Найближчий до апаратного забезпечення) |
+
 *Групи впорядковано від найближчої до користувача (№ 1) до найближчої до апаратного забезпечення. Зайві рядки вилучити, за потреби — додати.*
 
 **Рядки, які не вдалося віднести до жодної групи:**
